@@ -43,7 +43,7 @@ public class Movie {
         addetails(m,s);
         list.add(m);
     }
-    public static void addMovie(String country,String language){
+    public static void addMovieInt(String country,String language){
         Scanner s=new Scanner(System.in);
         System.out.println("Write Movie Name:");
         String name=s.nextLine();
@@ -51,6 +51,17 @@ public class Movie {
         String prod_by=s.nextLine();
 
         Movie m=new InternationalMovie(name,prod_by,country,language);//,"","","",""
+        addetails(m,s);
+        list.add(m);
+    }
+    public static void addMovieSpc(String soundEffectsTechnology,String visualEffectsTechnology){
+        Scanner s=new Scanner(System.in);
+        System.out.println("Write Movie Name:");
+        String name=s.nextLine();
+        System.out.println("Producer Name:");
+        String prod_by=s.nextLine();
+
+        Movie m=new SpecialMovie(name,prod_by,soundEffectsTechnology,visualEffectsTechnology);//,"","","",""
         addetails(m,s);
         list.add(m);
     }
@@ -97,4 +108,19 @@ class InternationalMovie extends Movie{
         System.out.println("Movie produced in:"+this.country);
         System.out.println("Original language:"+this.language);
     }
+}
+class SpecialMovie extends Movie{
+    String soundEffectsTechnology;
+    String visualEffectsTechnology;
+    public SpecialMovie(String movie_name, String produced_by,String soundEffectsTechnology,String visualEffectsTechnology) {
+        super(movie_name, produced_by);
+        this.soundEffectsTechnology=soundEffectsTechnology;
+        this.visualEffectsTechnology=visualEffectsTechnology;
+    }
+    public void display() {
+        super.display();
+        System.out.println("Movie produced in:"+this.soundEffectsTechnology);
+        System.out.println("Original language:"+this.visualEffectsTechnology);
+    }
+
 }

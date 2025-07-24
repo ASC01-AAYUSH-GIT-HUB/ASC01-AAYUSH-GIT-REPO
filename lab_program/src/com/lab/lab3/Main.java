@@ -21,7 +21,7 @@ public class Main {
 //            }
 //        }
         while(true){
-            System.out.println("for adding movie type: 1\nfor adding international movie type:2\nType any number between 3 to 10 for exiting the adding section");
+            System.out.println("for adding movie type: 1\nfor adding international movie type:2\nfor adding special movie type:3\nType any number between 4 to 10 for exiting the adding section");
             byte choice=main.s.nextByte();
             String choiceExit="n";
             switch (choice){
@@ -34,7 +34,15 @@ public class Main {
                     String country=main.s.nextLine();
                     System.out.println("Language it is shoot in:");
                     String language=main.s.nextLine();
-                    Movie.addMovie(country,language);
+                    Movie.addMovieInt(country,language);
+                    break;
+                case 3:
+                    main.s.nextLine();
+                    System.out.println("Country of Origin:");
+                    String soundET=main.s.nextLine();
+                    System.out.println("Language it is shoot in:");
+                    String visualET=main.s.nextLine();
+                    Movie.addMovieSpc(soundET,visualET);
                     break;
                 default:
                     System.out.println("you selected exit option, you want to exit(y/n)");
