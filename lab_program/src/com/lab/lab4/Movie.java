@@ -1,12 +1,10 @@
-package com.lab.lab3;
+package com.lab.lab4;
 
-import jdk.nashorn.internal.runtime.regexp.joni.ScanEnvironment;
 
 import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Movie {
-
     String movie_name;
     String produced_by;
     String directed_by;
@@ -65,7 +63,7 @@ public class Movie {
         addetails(m,s);
         list.add(m);
     }
-    private static void addetails(Movie m,Scanner s){
+    private static void addetails(Movie m, Scanner s){
         System.out.println("Want to add more details then type y else n");
         String opt=s.nextLine();
         if(opt.equals("y")){
@@ -101,7 +99,7 @@ public class Movie {
         }
     }
 }
-class InternationalMovie extends Movie{
+class InternationalMovie extends Movie {
     String country;
     String language;
     public InternationalMovie(String movie_name, String produced_by,String country,String language) {
@@ -109,13 +107,22 @@ class InternationalMovie extends Movie{
         this.country=country;
         this.language=language;
     }
+    @Override
     public void display() {
         super.display();
         System.out.println("Movie produced in:"+this.country);
         System.out.println("Original language:"+this.language);
     }
+    @Override
+    public String showDetails() {
+        String concat= super.showDetails()+" "+this.language+" "+this.country;
+        return concat;
+    }
+    public void getinternational(){
+        System.out.println(this.movie_name+" "+this.country+" "+this.language);
+    }
 }
-class SpecialMovie extends Movie{
+class SpecialMovie extends Movie {
     String soundEffectsTechnology;
     String visualEffectsTechnology;
     public SpecialMovie(String movie_name, String produced_by,String soundEffectsTechnology,String visualEffectsTechnology) {
@@ -123,10 +130,21 @@ class SpecialMovie extends Movie{
         this.soundEffectsTechnology=soundEffectsTechnology;
         this.visualEffectsTechnology=visualEffectsTechnology;
     }
+    public void getspecial(){
+        System.out.println(this.movie_name+" "+this.visualEffectsTechnology+" "+this.soundEffectsTechnology);
+    }
+    @Override
     public void display() {
         super.display();
         System.out.println("Sound Effects Technology: " + this.soundEffectsTechnology);
         System.out.println("Visual Effects Technology: " + this.visualEffectsTechnology);
     }
 
+    @Override
+    public String showDetails() {
+        String concat= super.showDetails()+" "+this.soundEffectsTechnology+" "+this.visualEffectsTechnology;
+        return concat;
+    }
+
 }
+
