@@ -88,9 +88,15 @@ public class Movie {
             m.movie_id=m.movie_name+"_"+ Integer.toString(m.count_Movie);
         }
     }
+    public String showDetails(){
+        String concat;
+        concat=this.movie_name+" "+this.produced_by+" "+this.directed_by+" "+this.category;
+        return concat;
+    }
     public static void allMovie(){
         for(Movie m: list){
             m.display();
+            System.out.println(m.showDetails());
             System.out.println("-------------------------------------------");
         }
     }
