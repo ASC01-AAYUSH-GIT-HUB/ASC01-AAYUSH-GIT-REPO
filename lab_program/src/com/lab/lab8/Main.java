@@ -6,14 +6,14 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-//        Scanner s=new Scanner(System.in);
-//        System.out.println("Write the name of book:");
-//        String bname=s.nextLine();
-//        System.out.println("Writer's name:");
-//        String aname=s.nextLine();
-//        System.out.println("date of origin(book)(yyyy-mm-dd):");
-//        String date=s.nextLine();
-//        insertValue(bname,aname,date);
+        Scanner s=new Scanner(System.in);
+        System.out.println("Write the name of book:");
+        String bname=s.nextLine();
+        System.out.println("Writer's name:");
+        String aname=s.nextLine();
+        System.out.println("date of origin(book)(yyyy-mm-dd):");
+        String date=s.nextLine();
+        insertValue(bname,aname,date);
         displayValue();
     }
     public static void insertValue(String name,String authorname,String date){
