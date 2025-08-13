@@ -1,0 +1,329 @@
+{
+	"info": {
+		"_postman_id": "b4229b17-d7bd-49a0-91f8-285107091943",
+		"name": "midterm-test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "47440747"
+	},
+	"item": [
+		{
+			"name": "getallcource",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}/course/all",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"course",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getbyId",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}/course/3",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"course",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addingCource",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"courseName\": \"Java Advance\",\r\n    \"authorName\": \"John Doe\",\r\n    \"duration\": \"28\",\r\n    \"availability\": true\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}/course/add",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"course",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updatingCource",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"courseName\": \"s1\",\r\n    \"authorName\": \"a10\",\r\n    \"duration\": \"28\",\r\n    \"availability\": true\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}/course/update/4",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"course",
+						"update",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteCourse",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"courseName\": \"s1\",\r\n    \"authorName\": \"a2\",\r\n    \"duration\": \"28\",\r\n    \"availability\": true\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}/course/delete/5",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"course",
+						"delete",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteAllCourses",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"courseName\": \"s1\",\r\n    \"authorName\": \"a2\",\r\n    \"duration\": \"28\",\r\n    \"availability\": true\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}/course/deleteAll",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"course",
+						"deleteAll"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "gettingbyName",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"courseName\": \"Java Advance\",\r\n    \"authorName\": \"John Martin\",\r\n    \"duration\": \"28\",\r\n    \"availability\": true\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}/course/search/name/java advance",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"course",
+						"search",
+						"name",
+						"java advance"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "gettingbyAuthor",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"courseName\": \"Java Advance\",\r\n    \"authorName\": \"John Martin\",\r\n    \"duration\": \"28\",\r\n    \"availability\": true\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}/course/search/author/john doe",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"course",
+						"search",
+						"author",
+						"john doe"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "idlogin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"login_id\":\"asd@dfs\",\r\n    \"pass\":\"password123\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}/verification/id",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"verification",
+						"id"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "removingfromCart",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"courseName\": \"s1\",\r\n    \"authorName\": \"a2\",\r\n    \"duration\": \"28\",\r\n    \"availability\": true\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}/course/cart/remove/1",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"course",
+						"cart",
+						"remove",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addingInCart",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"courseName\": \"s1\",\r\n    \"authorName\": \"a2\",\r\n    \"duration\": \"28\",\r\n    \"availability\": true\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}/course/cart/add/1",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"course",
+						"cart",
+						"add",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

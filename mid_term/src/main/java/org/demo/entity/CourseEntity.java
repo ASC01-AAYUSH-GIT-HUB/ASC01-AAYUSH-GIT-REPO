@@ -71,11 +71,11 @@ public class CourseEntity {
         this.availability = availability;
     }
 
-    public void corseGoingToAdded(CourseEntity courseEntity){
-        System.err.println(courseEntity.getCourseName() + " | " +
-                courseEntity.getAuthorName() + " | " +
-                courseEntity.getDuration() + " | " +
-                courseEntity.getAvailability());
+    public void corseGoingToAdded(){
+        System.err.println(this.getCourseName() + " | " +
+                this.getAuthorName() + " | " +
+                this.getDuration() + " | " +
+                this.getAvailability());
     }
     public static Map<Long,CourseEntity> cart=new HashMap<>();
 }
