@@ -16,7 +16,7 @@ public class IdPassServiceImpl implements IdPassService{
     @Override
     public String getVerification(IdPassEntity idPassEntity) {
         try{
-            IdPassEntity id=idPassRepo.findById(idPassEntity.getId()).get();
+            IdPassEntity id=idPassRepo.findById(idPassEntity.getLogin_id()).get();
             if(id.compare(idPassEntity)){
                 return "you logged in now";
             }

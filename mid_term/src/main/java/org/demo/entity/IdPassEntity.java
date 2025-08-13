@@ -6,24 +6,24 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "idandpass")
+@Table(name = "login")
 public class IdPassEntity {
     @Id
-    private String id;
+    private String login_id;
     @Column(name = "password",nullable = false)
     private String pass;
 
     public IdPassEntity() {
     }
-    public IdPassEntity(String id, String pass) {
-        this.id = id;
+    public IdPassEntity(String login_id, String pass) {
+        this.login_id = login_id;
         this.pass = pass;
     }
-    public String getId() {
-        return id;
+    public String getLogin_id() {
+        return login_id;
     }
-    public void setId(String id) {
-        this.id = id;
+    public void setLogin_id(String login_id) {
+        this.login_id = login_id;
     }
     public String getPass() {
         return pass;
