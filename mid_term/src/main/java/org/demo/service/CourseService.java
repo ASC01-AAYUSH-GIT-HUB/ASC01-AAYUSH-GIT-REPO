@@ -2,6 +2,7 @@ package org.demo.service;
 
 import org.demo.entity.CourseEntity;
 import java.util.List;
+import java.util.Map;
 
 public interface CourseService {
 
@@ -20,4 +21,12 @@ public interface CourseService {
     List<CourseEntity> searchByAuthor(String author);
 
     List<CourseEntity> searchByCourseName(String courseName);
+
+    Map<Long,CourseEntity> addToCart(Long courseId);
+
+    Map<Long,CourseEntity> removeFromCart(Long courseId);
+
+    Map<Long,CourseEntity> displayCart();
+
+
 }

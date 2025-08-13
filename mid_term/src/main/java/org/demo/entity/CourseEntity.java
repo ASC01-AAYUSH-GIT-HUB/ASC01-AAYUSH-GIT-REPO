@@ -1,6 +1,10 @@
 package org.demo.entity;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 @Entity
 @Table(name = "Course")
@@ -73,4 +77,5 @@ public class CourseEntity {
                 courseEntity.getDuration() + " | " +
                 courseEntity.getAvailability());
     }
+    public static Map<Long,CourseEntity> cart=new HashMap<>();
 }

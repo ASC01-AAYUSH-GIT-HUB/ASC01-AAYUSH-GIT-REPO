@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Map;
 
 @RestController
 @RequestMapping("/course")
@@ -64,5 +65,20 @@ public class CourseController {
     @DeleteMapping("/deleteAll")
     void deleteAllCourses() {
         courseService.deleteAllCourses();
+    }
+
+    @PostMapping("/cart/add/{id}")
+    Map<Long,CourseEntity> addingInCart(@PathVariable Long id){
+        return courseService.addToCart(id);
+    }
+
+    @DeleteMapping("/cart/remove/{id}")
+    Map<Long,CourseEntity> removingFromCart(@PathVariable Long id){
+        return courseService.removeFromCart(id);
+    }
+
+    @GetMapping("/cart/all")
+    Map<Long,CourseEntity> displayAllInCart(){
+        return CourseEntity.cart;
     }
 }

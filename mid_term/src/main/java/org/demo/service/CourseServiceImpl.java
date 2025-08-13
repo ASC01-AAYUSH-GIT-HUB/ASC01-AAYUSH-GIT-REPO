@@ -5,7 +5,9 @@ import org.demo.repo.CourseRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Collections;
 import java.util.List;
+import java.util.Map;
 
 @Service
 public class CourseServiceImpl implements CourseService {
@@ -62,5 +64,23 @@ public class CourseServiceImpl implements CourseService {
     @Override
     public List<CourseEntity> searchByCourseName(String courseName) {
         return courseRepo.findByCourseNameContainingIgnoreCase(courseName);
+    }
+
+    @Override
+    public Map<Long, CourseEntity> addToCart(Long courseId) {
+        CourseEntity courseEntity=courseRepo.findById(courseId).get();
+        CourseEntity.cart.put(courseId,courseEntity);
+        return CourseEntity.cart;
+    }
+
+    @Override
+    public Map<Long, CourseEntity> removeFromCart(Long courseId) {
+        CourseEntity.cart.remove(courseId);
+        return CourseEntity.cart;
+    }
+
+    @Override
+    public Map<Long, CourseEntity> displayCart() {
+        return CourseEntity.cart;
     }
 }
